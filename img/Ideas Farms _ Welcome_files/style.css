@@ -1,0 +1,286 @@
+body {
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Global */
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.button_1 {
+  height: 38px;
+  background: #dc8e08fe;
+  border: 0;
+  padding-left: 20px;
+  font-size: 18px;
+  padding-right: 20px;
+  color: #ffffff;
+}
+
+.dark {
+  padding: 15px;
+  background: #35424a;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Header **/
+header {
+  background: #35424a;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #dc8e08fe 3px solid;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header li {
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #brand {
+  float: left;
+}
+
+header #brand h1 {
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight,
+header .current a {
+  color: #dc8e08fe;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #cccccc;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Showcase */
+#showcase {
+  min-height: 400px;
+  background: url("../img/pineapple.jpg") no-repeat 0 -400px;
+  background-attachment: fixed;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+}
+
+#showcase h1 {
+  padding-top: 60px;
+  font-size: 45px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+#showcase p {
+  font-size: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+#showcase .container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* email */
+#email {
+  padding: 15px;
+  color: #ffffff;
+  background: #35424a;
+}
+
+#email h1 {
+  float: left;
+}
+
+#email form {
+  float: right;
+  margin-top: 15px;
+}
+
+#email input[type="email"] {
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+
+/* Boxes */
+#boxes {
+  margin-top: 20px;
+}
+
+#boxes .box {
+  float: left;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+}
+
+#boxes .box img {
+  width: 90px;
+}
+
+/* Customers */
+#customers {
+  background-color: #35424a;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#customers .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#customers .customer {
+  width: 30%;
+  text-align: center;
+  color: #f4f4f4;
+  border: 4px solid #dc8e08fe;
+  border-radius: 10px;
+}
+
+#customers img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding-top: 10px;
+}
+
+#customers .customer h3,
+.customer img {
+  margin: 0;
+}
+
+#customers .title {
+  text-align: center;
+  font-size: 30px;
+  color: #f4f4f4;
+  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 10px 0px;
+  text-transform: capitalize;
+}
+
+/* footer */
+footer p {
+  font-size: large;
+}
+
+/* Sidebar */
+aside#sidebar {
+  float: right;
+  width: 30%;
+  margin-top: 10px;
+}
+
+aside#sidebar .quote input,
+aside#sidebar .quote textarea {
+  width: 90%;
+  padding: 5px;
+}
+
+/* Main-col */
+article#main-col {
+  float: left;
+  width: 65%;
+}
+
+/* Services */
+ul#services li {
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background: #e6e6e6;
+}
+
+footer {
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #dc8e08fe;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header #brand,
+  header nav,
+  header nav li,
+  #email h1,
+  #email form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    padding-bottom: 20px;
+  }
+
+  #showcase h1 {
+    margin-top: 40px;
+    font-size: 37px;
+  }
+
+  #email button,
+  .quote button {
+    display: block;
+    width: 100%;
+  }
+
+  #email form input[type="email"],
+  .quote input,
+  .quote textarea {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  #customers .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #customers .customer {
+    width: 80%;
+    margin-top: 30px;
+  }
+}
